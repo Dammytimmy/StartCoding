@@ -125,7 +125,7 @@
     color: #E5E7EB;
 }
 
-             /*Illustrations & Information*/
+             /*Illustrations & Information Styles*/
 .container3
 {
     display: flex;
@@ -200,4 +200,116 @@
     text-align: center;
     font-size: 16px;
     color: #6D747D;
+}
+
+
+
+                /*Quote for Support Styles*/
+.container4
+{
+    width: 100%;
+    height: fit-content;
+    padding-top: 90px;
+    padding-bottom: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #E5E7EB;
+   /* border: 1px solid red; /*for debugging*/
+}
+
+.container4 > p
+{
+    order: 1;
+    width: 800px;
+    font-size: 36px;
+    font-weight: 300;
+    font-style: italic;
+   /* border: 1px solid red; /*for debugging*/
+    color:#1F2937;
+}
+#recognition
+{
+    order: 2;
+    width: 800px;
+    color: #1F2937;
+    text-align: right;
+    padding-right: 20px;
+    font-size: 20px;
+    font-weight: 900;
+}
+
+                        /*Action box to sign up styles*/
+.container5
+{
+    width: 100%;
+    height: fit-content;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+   /* border: 1px solid red; /*for debugging*/ 
+}
+
+.group-parts
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border: 1px solid blue; /*for debugging*/
+    background-color: #3882F6;
+    padding: 30px;
+    border-radius: 6px;
+}
+
+.action-words
+{
+    order: 1;
+    width: fit-content;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+   /* border: 1px solid brown;  for debugging*/
+    margin-left: 50px;
+}
+
+.action-words > p
+{
+    font-size: 20px;
+    font-weight: 900;
+    color: #F9FAF8;
+    text-align: left;
+}
+
+#text2
+{
+    font-size: 16px;
+    font-weight: 200;
+    text-align: left;
+}
+
+.button-div
+{
+    order: 2;
+    width: 300px;
+    padding-top: 20px;
+    padding-left: 100px;
+}
+
+#action-button
+{
+    
+    background-color: #3882F6;
+    text-align: center;
+    border: 2px solid white;
+    color: #E5E7EB;
+    padding: 5px;
+    width: 100px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: 900;
 }
