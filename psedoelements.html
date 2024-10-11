@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1::first-letter{
+            font-size: 2em;
+            font-style: italic;
+        }
+        p::first-line{
+            background-color: yellow;
+        }
+
+        p::selection
+        {
+            color: green;
+            background-color: black;
+        }
+
+        #fruit li::marker{
+            content: "👌";
+            color: green;
+        }
+
+        #apple::after
+        {
+            content: "👌";
+        }
+        #banana::after
+        {
+            content: "👌";
+        }#orange::after
+        {
+            content: "👌";
+        }
+    </style>
+</head>
+<body>
+    <h1>Hello</h1>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit itaque culpa hic voluptatum fugit reprehenderit sint consequatur, inventore enim quae sequi, quibusdam, placeat modi mollitia necessitatibus aspernatur ipsa labore porro.</p>
+
+    <ul id="fruit">
+        <li id="apple">Apple</li>
+        <li id="banana">Bannana</li>
+        <li id="orange">Orange</li>
+    </ul>
+</body>
+</html>
