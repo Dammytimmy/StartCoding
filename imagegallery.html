@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+
+    <style>
+        .gallery
+        {
+            display: inline-block;
+            border: 1px solid hsl(0,0%, 66%);
+            margin: 5px;
+            width: 200px;
+        }
+
+        .gallery .description{
+            padding: 10px;
+            text-align: center;
+        }
+
+        .gallery:hover 
+        {
+            border: 1px solid hsl(0,0%,20%);
+        }
+
+        .gallery img
+        {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="gallery">
+        <a target="_blank" href="lasagna.png">
+            <img src="lasagna.png" alt="lasagna">
+        </a>
+       <div class="description">Lasagna</div>
+
+    </div>
+
+    <div class="gallery">
+        <a target="_blank" href="lasagna.png">
+            <img src="lasagna.png" alt="lasagna">
+        </a>
+       <div class="description">Lasagna</div>
+
+    </div>
+
+    <div class="gallery">
+        <a target="_blank" href="lasagna.png">
+            <img src="lasagna.png" alt="lasagna">
+        </a>
+       <div class="description">Lasagna</div>
+
+    </div>
+</body>
+</html>
