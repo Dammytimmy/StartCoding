@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #box1
+    {
+        width: 200px;
+        height: 200px;
+        background-color: hsl(180, 100%, 63%);
+        position: sticky;
+        top: 0px;
+        left: 0px;
+        /*top: 0px; /*pushed down 100px*/
+        /*left: 0px; /*pushed right 100px*/
+       /* bottom: 0px; /*push up 100px*/
+       /*right: 100px; push left by 100px*/
+    }
+    #box2
+    {
+        width: 100px;
+        height: 100px;
+        background-color: hsl(9, 79%, 43%);
+        position: absolute;
+        top: 50px;
+        left: 50px;
+    }
+
+    body
+    {
+        background-image: url(lasagna.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+
+    a:link
+    {
+        color: aqua;
+    }
+    a:hover
+    {
+        color: blue;
+        font-size: 1em;
+    }
+    a:active
+    {
+        color: green;
+        font-size: 1.1em;
+    }
+    a:visited
+    {
+        color: purple;
+    }
+
+    li:hover
+    {
+        background-color: yellow;
+    }
+    li:not(:hover)
+    {
+        background-color: red;
+    }
+    li:nth-child(3n + 1) {
+        background-color: brown;
+    } /*3n third from a position*/
+</style>
+<body>
+    <!--
+relative - positioned to where it normally
+fixed - posotioned relative to viewport
+absolute - positioned relative to nearest ancestor
+sticky - positoned based on scroll position
+static - default position of an element
+-->
+
+<div id="box1">
+    <div id="box2"></div>
+</div>
+
+<a href="https://google.com">Google</a>
+
+<ul>
+    <li>This is a #1</li>
+    <li>This is a #1</li>
+    <li>This is a #1</li>
+    <li>This is a #1</li>
+    <li>This is a #1</li>
+    <li>This is a #1</li>
+    <li>This is a #1</li>
+    <li>This is a #1</li>
+    <li>This is a #1</li>
+</ul>
+
+<!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid nihil amet ipsa fuga laborum, expedita id quae quaerat voluptatem nisi consequuntur temporibus reiciendis illo officia recusandae aliquam velit repellat quos.</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid nihil amet ipsa fuga laborum, expedita id quae quaerat voluptatem nisi consequuntur temporibus reiciendis illo officia recusandae aliquam velit repellat quos.</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid nihil amet ipsa fuga laborum, expedita id quae quaerat voluptatem nisi consequuntur temporibus reiciendis illo officia recusandae aliquam velit repellat quos.</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid nihil amet ipsa fuga laborum, expedita id quae quaerat voluptatem nisi consequuntur temporibus reiciendis illo officia recusandae aliquam velit repellat quos.</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid nihil amet ipsa fuga laborum, expedita id quae quaerat voluptatem nisi consequuntur temporibus reiciendis illo officia recusandae aliquam velit repellat quos.</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid nihil amet ipsa fuga laborum, expedita id quae quaerat voluptatem nisi consequuntur temporibus reiciendis illo officia recusandae aliquam velit repellat quos.</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid nihil amet ipsa fuga laborum, expedita id quae quaerat voluptatem nisi consequuntur temporibus reiciendis illo officia recusandae aliquam velit repellat quos.</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid nihil amet ipsa fuga laborum, expedita id quae quaerat voluptatem nisi consequuntur temporibus reiciendis illo officia recusandae aliquam velit repellat quos.</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid nihil amet ipsa fuga laborum, expedita id quae quaerat voluptatem nisi consequuntur temporibus reiciendis illo officia recusandae aliquam velit repellat quos.</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid nihil amet ipsa fuga laborum, expedita id quae quaerat voluptatem nisi consequuntur temporibus reiciendis illo officia recusandae aliquam velit repellat quos.</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid nihil amet ipsa fuga laborum, expedita id quae quaerat voluptatem nisi consequuntur temporibus reiciendis illo officia recusandae aliquam velit repellat quos.</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid nihil amet ipsa fuga laborum, expedita id quae quaerat voluptatem nisi consequuntur temporibus reiciendis illo officia recusandae aliquam velit repellat quos.</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid nihil amet ipsa fuga laborum, expedita id quae quaerat voluptatem nisi consequuntur temporibus reiciendis illo officia recusandae aliquam velit repellat quos.</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid nihil amet ipsa fuga laborum, expedita id quae quaerat voluptatem nisi consequuntur temporibus reiciendis illo officia recusandae aliquam velit repellat quos.</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid nihil amet ipsa fuga laborum, expedita id quae quaerat voluptatem nisi consequuntur temporibus reiciendis illo officia recusandae aliquam velit repellat quos.</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid nihil amet ipsa fuga laborum, expedita id quae quaerat voluptatem nisi consequuntur temporibus reiciendis illo officia recusandae aliquam velit repellat quos.</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid nihil amet ipsa fuga laborum, expedita id quae quaerat voluptatem nisi consequuntur temporibus reiciendis illo officia recusandae aliquam velit repellat quos.</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid nihil amet ipsa fuga laborum, expedita id quae quaerat voluptatem nisi consequuntur temporibus reiciendis illo officia recusandae aliquam velit repellat quos.</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid nihil amet ipsa fuga laborum, expedita id quae quaerat voluptatem nisi consequuntur temporibus reiciendis illo officia recusandae aliquam velit repellat quos.</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid nihil amet ipsa fuga laborum, expedita id quae quaerat voluptatem nisi consequuntur temporibus reiciendis illo officia recusandae aliquam velit repellat quos.</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid nihil amet ipsa fuga laborum, expedita id quae quaerat voluptatem nisi consequuntur temporibus reiciendis illo officia recusandae aliquam velit repellat quos.</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid nihil amet ipsa fuga laborum, expedita id quae quaerat voluptatem nisi consequuntur temporibus reiciendis illo officia recusandae aliquam velit repellat quos.</p> -->
+
+</body>
+</html>
