@@ -1,5 +1,17 @@
+
+
+body
+{
+    margin: 0;
+    padding: 0;
+    background-color: #b3b5ef;
+}
+
 .testimonial
 {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
     background-color: white;
     border-radius: 20px;
     box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
@@ -21,9 +33,11 @@
     margin: 0;
 }
 
+
+
 .testimonial-body .fa-quote-right
 {
-    color: #eee;
+    color: #686de0;
     font-size: 40px;
     float: right;
 }
