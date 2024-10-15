@@ -14,11 +14,54 @@
         alert(3 * NaN); //NaN
         alert(NaN ** 0)// funny enough this is equals to 1(exponentation operation)
         
+        //Strings
         let fan = "Messi"; //Double quotes for strings
         let way = 'bread of life' // single quotes for strings
 
         //Template strings ${}
         let phrase = `can embed another ${fan}`; // use backticks for template strings
+
+        //Booleans
+        let isGreater = 4 > 1;
+        alert(isGreater); // true 
+
+        //What is null
+        //Null represents nothing or it's unknown
+
+        //undefined value
+        //This means value is not assigned
+
+        let age;
+        alert(age)//shows undefined
+
+        //It's possible to assign undefined to a variable
+        let rage = 23;
+        rage = undefined; //use null instead 
+
+        typeof null// it's a object
+        typeof alert// it's a function
+
+        //Logical Operators
+        alert(true || true); //true
+        alert(0 || 1); //true
+        alert(false || false); //false
+        alert(null || 1); // 1 (bsc it's the first truthy value)
+        alert(null || 0 || 1); // 1
+
+        alert(true && true); //true
+        alert(false && true);//false
+        alert(1 && 0); //0
+        alert(1 && 5); //5
+    
+        alert(!true); //false
+        alert(!0);
+
+        //!! double not used for converting a value to boolean type
+        alert(!!"non-empty string" ); //true
+        alert(!!null ); //false
+        alert( Boolean("non-empty string") ); //true
+        alert(Boolean(null)); //false
+
 </script>
 </body>
 </html>
