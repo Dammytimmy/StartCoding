@@ -1,0 +1,25 @@
+body{
+    font-family: Verdana;
+    text-align: center;
+}
+
+#myButton
+{
+    font-size: 3em;
+    padding: 5px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: aquamarine;
+    transition: background-color 0.33s;
+}
+
+.myLabels
+{
+    display: block;
+    border: 1px solid black;
+    width: 100px;
+    margin: auto;
+    margin-top: 3px;
+    background-color: rgb(43, 115, 202);
+    color: white;
+}
