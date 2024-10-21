@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dealing with functions</title>
+</head>
+<body>
+<script>
+    function addNumbers(num1,num2)
+        {
+            return num1 + num2;
+        }
+
+   // alert(addNumbers(3,2));
+
+   function takeSeven(grabNum)
+    {
+        return grabNum + 7;
+    }
+
+    //alert(takeSeven(4));
+
+    function multiply(rad1, rad2)
+        {
+            return rad1 * rad2;
+        }
+   // alert(multiply(14,2));
+
+    function capitalize(message)
+        {
+            message = window.prompt("Enter any word: ");
+            let change = message.charAt(0).toUpperCase();
+
+            return change + message.substring(1);
+        }
+    //alert(capitalize());
+
+    function lastletter(lower)
+        {
+            lower = window.prompt("Enter any word my bro potato: ");
+                let last = lower.charAt(lower.length-1); // to get the last index of a string we can use slice(-1)
+            return last;
+        }
+    alert((lastletter()))
+    
+
+
+</script>
+</body>
+</html>
