@@ -1,0 +1,125 @@
+/*Revision of CSS*/
+
+/* Selector {property: value} */
+
+/* universal selector: * */
+* {
+    color: red;
+}
+
+/* Type selector */
+div {
+    color: blue;
+}
+
+/* Class selector */
+.alert{
+    color: purple;
+}
+
+/* ID Selectors */
+#title {
+    color: orange;
+}
+
+/* NOTE: there is a difference between classes and IDs and is that an element can only have one ID */
+
+/* The grouping selector (different classes same declaration) */
+.read,
+.habit {
+    color: indigo;
+}
+
+/* Chaining selectors (joins two classees together of a class and ID) */
+.sub.jik{
+    color: blue;
+}
+ .sube#john {
+    color: firebrick;
+ }
+
+ /* Descendant combinator */
+ .classParent .classChild {
+    font-family: Arial, Helvetica, sans-serif;
+ }
+
+ /* CSS Properties */
+ /* colors 
+                Red         Green       Blue
+ RGB Colors     (255,0,0)   (0,255,0)   (0,0,255)
+ HexCodes       #FF0000      #00FF00    #0000FF
+
+ FONTS
+ font-family
+ font-size
+ font-weight
+ text-align
+
+ IMAGES
+ NOTE: To adjust the size of images without causing it to lose its proportions set height: "auto";
+ img {
+ height: auto;
+width: 300px;
+ }
+ */
+
+ /*Child Combinators*/
+  .class > .secondclass 
+  {
+    color: red;
+  }
+
+  /* Box Model A very good practice for css layout*/
+
+  /*html {
+    box-sizing: border-box;
+  }*/
+  
+  /* *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }*/
+
+  /*Padding is the space between the content of the box and the border of the box
+    Border is the little space between the margin and padding
+    Margin increases the space betwwen the borders of the box and the adjacent boxes
+    
+    NOTE: padding and borders add to the height of the content; margin doesn't
+    if you use box-sizing: content-box, it really shows the effect
+
+    But if you use box-sizing: border-box, the html page forces the padding and borders to adjust to the 
+     width and height you set in your CSS e.g height=50, width=50 padding = 10 border=20 instead of becoming bigger
+     height = 20 + 10 +20(instead of 50) = 50
+     width = 20 + 10 + 20 = 50
+
+     Margins from bigger element affect elements with smaller margins
+     e.g a box with 100px margin will take over a corresponding element with 70px(leads to 30px space)
+
+     NOTE: display: block;
+     -takes new line
+     -width and height are respected
+     -padding margin and border will push away other elements
+     -if width is not specified, it takes up any available space in the container
+     <h1> <p>
+
+     NOTE: display:inline;
+     -takes no new line pls
+     -width and height properties do not apply
+     -top and bottom padding,margin and border will not push away other elements
+     -left and right paddings,margin and border will push away other elements
+      e.g <a>, <span> <strong>
+
+      NOTE: Incase of layout situations, there is inline-size and block-size
+  */
+
+  /*Introduction to flexbox*/
+
+  /* h1
+  {
+    border: 3px solid hsl(262, 100%, 56%);
+    border-radius: 20px;
+  }
+   */
+  
+  

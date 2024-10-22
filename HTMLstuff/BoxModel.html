@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Understanding Box Model</title>
+    <style>
+        .box {
+  border: 5px solid rebeccapurple;
+  background-color: lightgray;
+  padding: 40px;
+  margin: 40px;
+  width: 300px;
+  height: 150px;
+}
+
+/* .box {
+  margin-top: -40px;
+  margin-right: 30px;
+  margin-bottom: 40px;
+  margin-left: 4em;
+} */
+
+.alternate {
+  box-sizing: border-box;
+  height: 240px;
+  width: 390px;
+}
+
+/* .one
+{
+    margin-bottom: -50px;
+    border: 5px solid rebeccapurple;
+    background-color: lightgray;
+}
+
+.two
+{
+    margin-top: -30px;
+    border: 5px solid rebeccapurple;
+    background-color: lightgray;
+} */
+
+.first
+{
+    display: inline-block;
+    text-decoration: none;
+    background-color: brown;
+    padding: 5px;
+}
+.two
+{
+    display: inline-block;
+    text-decoration: none;
+    background-color: brown;
+    padding: 5px;
+}
+.negative
+{
+    border: 1px solid black;
+    margin-bottom: -1rem;
+}
+.grab
+{
+    border: 1px solid black;
+  padding: 1rem;
+}
+
+.good
+{
+    margin: 0 auto;
+    width: 300px;
+    border: 1px solid blueviolet;
+}
+    </style>
+</head>
+<body>
+    <!-- <div class="box">I am learning box model</div>
+    <div class="box alternate">With better skills and properties</div> -->
+
+    <div class="container">
+       <!-- <div class="box">Change my Margin</div> -->
+        <!-- <div class="one">Paragraph One</div>
+        <div class="two">Paragraph Two</div> -->
+
+        <a href="" class="first">Link One</a>
+        <a href="" class="two">Link Two</a>
+        <a href="" class="first">Link One</a>
+        <a href="" class="two">Link Two</a>
+        <a href="" class="first">Link One</a>
+        <a href="" class="two">Link Two</a>
+        <a href="" class="first">Link One</a>
+        <a href="" class="two">Link Two</a>
+    </div>
+
+    <div class="negative">Want to try margin negative</div>
+    <div class="grab">Ok Boss let's see</div>
+
+    <div class="good">A classic centering phenomenon</div>
+</body>
+</html>
