@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock, Paper, Scissors</title>
+</head>
+<body>
+    <script>
+        //Creating function to getComputer choice
+        function getComputerChoice()
+            {
+                let rock = "Rock";
+                let paper = "Paper";
+                let scissors = "Scissors";
+                let randSwitch = Math.floor(Math.random() * 3) + 1;
+
+                // return randSwitch; to test if the random numbers is between 1 and 3
+                 if(randSwitch == 1)
+                     {
+                         return rock;
+                     }
+                 else if(randSwitch == 2)
+                     {
+                         return paper;
+                     }
+                 else
+                     {
+                         return scissors;
+                     }
+            }
+
+            
+            console.log(getComputerChoice()); // it works it is giving an output of rock paper scissors
+            
+    </script>
+</body>
+</html>
