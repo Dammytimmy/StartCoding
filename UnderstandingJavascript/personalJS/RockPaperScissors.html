@@ -7,15 +7,24 @@
 </head>
 <body>
     <script>
-        //Creating function to getComputer choice
-        function getComputerChoice()
-            {
-                let rock = "Rock";
-                let paper = "Paper";
-                let scissors = "Scissors";
-                let randSwitch = Math.floor(Math.random() * 3) + 1;
+       
 
-                // return randSwitch; to test if the random numbers is between 1 and 3
+
+       // The head function playGame()
+            function playGame() 
+                {
+                    //global variables
+                let rock = "rock";
+                let paper = "paper";
+                let scissors = "scissors";
+
+                let humanScore = 0;      // the player's score 
+                let computerScore = 0;    //the computer's score
+                
+                //Creating function to getComputer choice
+                function getComputerChoice()
+                     {
+                let randSwitch = Math.floor(Math.random() * 3) + 1;
                  if(randSwitch == 1)
                      {
                          return rock;
@@ -29,10 +38,134 @@
                          return scissors;
                      }
             }
+            //Creating a function to getHumanChoice
+        function getHumanChoice() 
+                {
+                    let choice = window.prompt("Choose Rock, Paper or Scissors").toLowerCase();
+
+                    return choice;
+                }
 
             
-            console.log(getComputerChoice()); // it works it is giving an output of rock paper scissors
+           // console.log(getComputerChoice()); // it works it is giving an output of rock paper scissors
+
+           // console.log(getHumanChoice()); // it works it is prompting a user to input any of the choices and it prints it on the console
             
+       
+
+   
+                //the function playRound()
+        function playRound(humanChoice,computerChoice) 
+                {
+                    let draw = "It's a draw. Try again"; //if both choices are the same
+                    let computerWin = "You lose! " + computerChoice + " beats " + humanChoice; // if computer beats human
+                    let humanWin = "You win! " + humanChoice + " beats " + computerChoice; // if human beats computer
+
+                    
+                     if( computerChoice === rock &&  humanChoice == paper )
+                        {
+                            humanScore += 1; // it increments the humanscore if it wins
+                            console.log("Human score " + humanScore);
+                            return humanWin;
+                        }
+                    else if(computerChoice === paper && humanChoice == rock)
+                        {
+                            computerScore += 1; // it increments computer score if it wins
+                            console.log("Computer score " + computerScore);
+                            return computerWin;
+                        }
+                    else if(computerChoice == scissors && humanChoice == paper)
+                         {
+                            computerScore += 1;
+                            console.log("Computer score " + computerScore);
+                             return computerWin;
+                         }
+                     else if(computerChoice == rock && humanChoice == scissors)
+                         {
+                            computerScore += 1;
+                            console.log("Computer score " + computerScore);
+                             return computerWin;
+                         }
+                     else if(computerChoice == paper && humanChoice == scissors)
+                         {
+                            humanScore += 1;
+                            console.log("Human score " + humanScore);
+                             return humanWin;
+                         }
+                    else if(computerChoice == scissors && humanChoice == rock)
+                        {
+                            humanScore += 1;
+                            console.log("Human score " + humanScore);
+                            return humanWin;
+                        }
+                    else{
+                        
+                            return draw;              
+                    }
+                }
+                    //this helps with restarting the game for five times
+                function manageRounds(roundCount)
+                    {
+                        if(roundCount < 5) //the paramter roundcount helpsnto count the number of rounds
+                            {
+                                let humanChoice = getHumanChoice();
+                                let computerChoice = getComputerChoice();
+                            
+                            console.log("Computer's Choice  " + computerChoice);
+                            console.log("Human's Choice  " + humanChoice);
+                            console.log(playRound(humanChoice, computerChoice));
+
+                            //recursively call manageRounds for the next round
+                            manageRounds(roundCount + 1);
+                            }
+                        else // if you want to play again
+                            {
+                                let response = window.prompt("Do you want to play again? (yes/no)");
+                                if(response === "yes") 
+                                    {
+                                        humanScore = 0;
+                                        computerScore = 0;
+                                        console.log("Starting a new game..");
+                                        manageRounds(0); //Start the new game
+                                        
+                                    }
+                                else
+                                    {
+                                        //End the game and display the final scores
+                                        console.log("Final Scores: Human: " + humanScore + " , Computer: " + computerScore);
+                                        
+                                    }
+                            }
+                    }
+
+                //Call to play a round
+                //   let humanChoice = getHumanChoice();
+                //  let computerChoice = getComputerChoice();
+
+            // console.log("Computer's Choice  " + computerChoice);
+            // console.log("Human's Choice  " + humanChoice);
+            // console.log(playRound(humanChoice, computerChoice));
+            // console.log("Human score " + humanScore);
+           // console.log("Computer score " + computerScore);
+            
+            
+
+            //Errors I faced
+            //I didn't place the random variable in the function properly
+            //I was converting computer choice and human choice to lowercase when the variables had a capital
+            // I should have converted the window.prompt so that the human input will be converted to lowercase all through which is the
+            //the variable.
+            //.toLowercase()
+
+            //When a return statement is executed, it leaves the function so any stuff you want to print do it before the return(only one return)
+
+            
+            //Start the game by managing rounds
+            manageRounds(0);
+
+                }
+            
+                playGame();
     </script>
 </body>
 </html>
